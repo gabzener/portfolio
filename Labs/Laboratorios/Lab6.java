@@ -25,7 +25,6 @@ class Lab6{
 	
 
     // Se pide hacer los mismos ejercicios del Lab5 pero usando while
-
 /*
    int res = 1;
    int i = 1
@@ -36,7 +35,6 @@ class Lab6{
 	i = i+1;
 }
 */
-
 
     // PRIMER EJERCICIO
 
@@ -129,11 +127,11 @@ class Lab6{
 	
 	public static int cuantosTres(int n){
 		int resultado = 0;
-		int i = 0;
+		// int i = 0;
 		if (n <0)
 			n = n * -1;
 		else
-			n = n;
+			// n = n;
 		while (n > 0){
 			if (n%10 == 3 || n%10 == -3)
 				resultado = resultado +1;
@@ -163,7 +161,7 @@ class Lab6{
 		if (n <0)
 			n = n * -1;
 		else
-			n = n;
+			// n = n;
 		while ( n> 0){
 			if ( n % 10 == 3 || n % 10 == -3)
 				resultado = true;

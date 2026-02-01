@@ -52,13 +52,17 @@ class Lab5{
      *    lineaAst(1) -> "*"
      *    lineaAst(3) -> "***"
      */
-	 
+	
+    
 	public static String lineaAst(int n){
 		if (n <= 0)
 			return "";
 		else
-			return "*" + lineaAst(n-1);
+			return "*" + lineaAst(n-1); //En este ejercicio se devuelve la misma función pero con los valores cambiados.
 	}
+    /* Ese es el principio de recursión (con String en este caso), devolver todo el rato la misma funcion pero con valores
+    cambiados. Así, en las funciones String se acumula todo el contenido, y se envia todo a la vez.*/
+
     //SEGUNDO EJERCICIO
 
     /* cancionElefante(integer num) -> texto
@@ -82,7 +86,9 @@ class Lab5{
 		else
 			return cancionElefante(num - 1) + " " + num + " elefantes se balanceaban sobre la tela de una araña y como veían que no se caían fueron a llamar a otro elefante.";
     }
-	
+	/* Mismo principio que el ejercicio anterior, pero en este caso nos damos cuenta de que hay una excepción, y es cuando el num == 1.
+    Con esto, nos damos cuenta de que podemos jugar con el orden de el return en la recusión, cambiándolo a donde queremos que el siguiente
+    valor de la funcióon aparezca. */
 
     //TERCER EJERCICIO
 
@@ -102,7 +108,8 @@ class Lab5{
 		else
 			return sumaDigitos(num/10) + num%10;
 	}
-
+    /* Aquí pasa lo mismo, la recursion se acumula en los int tambien. Cuando dice que retorne el el resultado, devulve el acumulado por
+    todas las recursiones.*/
 
     //CUARTO EJERCICIO
 
@@ -128,7 +135,6 @@ class Lab5{
 	}
 
     //QUINTO EJERCICIO
-
 
     /* hayTres(int n) -> boolean
      * PRE: true

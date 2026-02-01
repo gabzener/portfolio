@@ -1,7 +1,7 @@
 package Laboratorios;
 /*
  * autora: Clara Benac Earle
- * autor:
+ * autor: Gabriel Duque Ojeda
  *
  * Ejercios de arrays
  *
@@ -32,6 +32,8 @@ class Lab7{
 	return resultado;
 
     }
+    // Ejemplo más básico, aquí hacemos un bucle en el que va añadiendo y sumando todos los valores a 
+    // [resultado] y luego devuelve ese mismo valor.
 
     /*
      * sumaElementosPares(array de enteros nums) -> entero
