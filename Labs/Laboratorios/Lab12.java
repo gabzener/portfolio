@@ -1,4 +1,8 @@
 package Laboratorios;
+
+//Este Lab se trata de algoritmos de ordenación, no es necesario hacerlo para Programación I.
+
+
 class Lab12{
 
     /*

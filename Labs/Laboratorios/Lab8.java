@@ -1,7 +1,7 @@
 package Laboratorios;
 /*
  * autora: Clara Benac Earle
- * autor:
+ * autor: Gabriel Duque Ojeda
  *
  * Ejercios de arrays
  *
@@ -47,7 +47,7 @@ class Lab8{
      *   sumaElementosPares([1,6,3,0,0]) = 6
      */
 
-    public static int sumaElementosPares(int[] elementos){
+    public static int sumaElementosParesAux(int[] elementos){
         int resultado = 0;
         for (int i = 0; i < elementos.length; i++)
             resultado = resultado + (elementos[i]%2 == 0? elementos[i]:0);
@@ -59,7 +59,7 @@ class Lab8{
     }
 
     public static int sumaElementosPares(int [] nums){
-        return sumaElementosParesAux(nums, 0);
+        return sumaElementosParesAux(nums);
     }
 
 
@@ -178,7 +178,7 @@ class Lab8{
 
     public static void main(String[] args){
         int [] col1 = {1,2,3,5,6};
-        System.out.println(sumaElementosR(col1));
+        System.out.println(sumaElementos(col1));
 /* 
         int [] col1 = {2, 4, 8, 3};
         int [] colnula = {};

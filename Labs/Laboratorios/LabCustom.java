@@ -43,9 +43,9 @@ public class LabCustom {
      *                                            -> array de caracteres
      * PRE: a no es null, b no es null, pos >= 0, pos <= a.length
      * POST: el resultado es un nuevo array donde aparecen en primer lugar
-                 los elementos que el array a tiene en las posiciones desde 0 hasta pos-1, 
-                 después todos los elementos del array b, y por último los elementos
-                del array a que ocupan las posiciones desde pos hasta a.length-1.
+     los elementos que el array a tiene en las posiciones desde 0 hasta pos-1, 
+     después todos los elementos del array b, y por último los elementos
+     del array a que ocupan las posiciones desde pos hasta a.length-1.
      * CASOS DE USO:
      * insertarArray( { }, 0, { } )  -> { }
      * insertarArray( {'a','b'}, 0, { } ) -> {'a', 'b'}
@@ -57,4 +57,15 @@ public class LabCustom {
      * insertarArray( {'a','b','c'}, 0, {'x','y'} ) ->{'x','y','a','b','c'}
     */
 
-}
+  public static char[] insertarArray(char[] original, int n, char[] sustitucion){
+    if(original == null || sustitucion == null){
+      return null;
+    } else if(n >= 0 || original.length <= 0){
+      return null;
+    }
+    
+
+
+    }
+
+  }
