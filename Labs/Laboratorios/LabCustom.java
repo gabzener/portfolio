@@ -4,6 +4,23 @@ package Laboratorios;
 
 public class LabCustom {
 
+// (Usado para las funciones auxiliares (private)) [public] controlador de visibilidad [static] orientado a objetos.
+
+int [] a = null;
+// Esto es una declaracion
+int [] arr = new int[4];
+//Esto es una inicializacion
+
+// for ( i = 0; i < a.length && a[i] != e; ++i)
+//   i == a.length || i < a.length && a [i] == e
+
+  public static void buscar(int [] a, int s){ 
+
+  }
+
+
+
+
     /*Se pide implementar usando iteración o recursión la siguiente especificación. 
 
       FUNCIÓN: esIdentidad(array de array de enteros m) -> boolean      
