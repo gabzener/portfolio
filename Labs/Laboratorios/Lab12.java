@@ -45,8 +45,6 @@ class Lab12{
 
 
 
-
-
     /* FUNCION: busquedaBinariaR(array de enteros arr, int n) -> boolean
      * PRE: arr no es null
      * POST: el resultado es true si n esta en arr y false e.o.c.
@@ -55,8 +53,28 @@ class Lab12{
      *   busquedaBinariaR([1,2,3,4],3) -> true
      */
 
- 
+    //Esto no es busqueda binaria, no me han eseñado estos algoritmos como tal.
 
+    public static boolean busquedaBinariaR(int [] arr, int n){
+        if(arr == null){
+            return false;
+        } else{
+            return busquedaBinariaRAux(arr, n, 0);
+        }
+    }
+    public static boolean busquedaBinariaRAux(int [] arr, int n, int i){
+
+        if(i>= arr.length){
+            return false;
+        }
+
+        if (arr[i] == n){
+            return true;
+        }
+        return busquedaBinariaRAux(arr, n, i+1);
+    }
+
+ 
     /*
      * PROCEDIMIENTO: ordenar(array de enteros arr)
      * PRE: arr no es null
