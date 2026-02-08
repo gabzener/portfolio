@@ -53,7 +53,7 @@ public static void main(String[] args){ //Las pruebas siempre se hacen en el mai
     lo que nos dará la terminal al completar o no completar las pruebas */
 
     boolean PruebasFinales = testInt && testString && testBoolean && testChar;
-    System.out.println("Las funciones" + (PruebasFinales? " han pasado todas las pruebas.": " han fallado alguna prueba."));
+    System.out.println("Las funciones" + (PruebasFinales? " han pasado todas las pruebas.": " ha fallado alguna prueba."));
 
     /*Con esto es a lo que me referia con booleano para cada prueba o 1 booleano
     para todas las pruebas. De todas formas el metodo más intuitivo y más detallado 
