@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ClassFuera",
+            "request": "launch",
+            "mainClass": "ClassFuera",
+            "projectName": "portfolio_dcb6a111"
+        },
+        {
+            "type": "java",
+            "name": "Progra2",
+            "request": "launch",
+            "mainClass": "Progra2",
+            "projectName": "portfolio_dcb6a111"
+        },
+        {
+            "type": "java",
+            "name": "Point0",
+            "request": "launch",
+            "mainClass": "Point0",
+            "projectName": "portfolio_dcb6a111"
+        },
+        {
+            "type": "java",
             "name": "ComoHacerPruebas",
             "request": "launch",
             "mainClass": "Apuntes_básicos.ComoHacerPruebas",

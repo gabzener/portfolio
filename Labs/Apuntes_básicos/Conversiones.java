@@ -1,4 +1,3 @@
-package Apuntes_básicos;
 
 // En este documento voy a apuntar todas las conversiones posibles de todos los tipos de 
 // literales de java.

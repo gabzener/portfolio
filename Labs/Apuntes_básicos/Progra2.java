@@ -1,5 +1,3 @@
-package Apuntes_básicos;
-
 public class Progra2 {
 
 // ¿Qué es la programacion orientada a objetos?
@@ -30,8 +28,54 @@ int [] arr = new int[4];
   // public static void buscar(int [] a, int s){ 
 
   //}
-  public static void main(String[] args){
-     System.out.println(edad);
+
+
+
+
+
+
+
+// Para constructores y creacion de clases
+
+ public static class Punto{
+    public double x,y;
+
+    public Punto(){ // COnstructor por defecto
+        this.x = 1.0;
+        this.y= 2.0;
+    }
+    public Punto(Punto p){ // Constructor de copia
+        this.x = p.x;
+        this.y = p.y;
+    }
+    public Punto(double x, double y){ //Constructor multiparámetros
+        this.x = x;
+        this.y = y;
+    }
+    public Punto(double d){
+        this.x = d;
+        this.y = d;
+    }
+    public String toString(){
+        return this.x + " " + this.y;
+    }
+    public Punto midPunto(Punto p){
+        Punto m = new Punto();
+        m.x = (this.x + p.x)/2;
+        m.y = (this.y + p.y)/2;
+        return m;
+
+    }
  }
-    
+
+ public static void main(String[] args) { 
+
+    Punto p1 = new Punto();
+    Punto p2 = new Punto();
+    p1 = new Punto(3.0);
+    p2 = new Punto(p2);
+    System.out.println(p1.toString());
+    System.out.println(p2.midPunto(p1));
+
+}
 }

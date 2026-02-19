@@ -1,0 +1,22 @@
+
+
+
+
+Todo fichero que se entrega para la practica de programaciond en VDHL tiene que tener la cabezera
+al principio del todo, sino no será corregida.
+
+Los nombres entre la entidad y las otras variables deben de ser distintas.
+
+
+Diferencia entre entidad de test y entidad --> La entidad test no tiene puertos, la entidad normal
+sin
+
+La estructura del fichero siempre es estructural, que está formada por componentes. Siempre llevan esa 
+cláusula. Si queremos simular la entidad, nombrar a la entidad component.
+
+Aquellas señales que no están aladidas como puertos, las puedo añadir.
+
+pasos:
+1. Activar transcript en view
+2. Activar Wave en View
+

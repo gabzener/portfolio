@@ -5,7 +5,7 @@ package First_Exercices;
 import java.util.Scanner;
 
 
-public class Ex {
+public class Scanner1 {
 
 
     static Scanner sc = new Scanner(System.in);

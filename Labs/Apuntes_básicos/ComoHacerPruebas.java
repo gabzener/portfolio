@@ -1,4 +1,3 @@
-package Apuntes_básicos;
 
 public class ComoHacerPruebas {
     

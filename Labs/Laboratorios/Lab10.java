@@ -99,8 +99,8 @@ public static char[] borrar(char[] a, int i) {
         resultado[j] = a[j];
     }
     
-    for (int k = i + 1; k < a.length; k++) {
-        resultado[k - 1] = a[k];
+    for (int k = i; k < resultado.length; k++) {
+        resultado[k - 1] = a[k+1];
     }
     return resultado;
 }
@@ -163,22 +163,45 @@ public static char[] borrar(char[] a, int i) {
    *   coincidentes( {'h','o','l','a'}, {'b','o','l','a'} )  -> {'o','l','a'}
    */
 
+
+  public static char[] coincidentes2(char[] arr1, char[] arr2){
+    if (arr1 == null || arr2 == null){
+      return null;
+    }
+    int contador = 0;
+    for(int i = 0; i< arr1.length; ++i){
+      if(arr1[i] == arr2[i]){
+        contador++;
+      }
+    }
+    char [] resultado = new char[contador];
+    int posicion = 0;
+    for (int i = 0; i< arr1.length; ++i){
+      if (arr1[i] == arr2[i]){
+        resultado[posicion] = arr1[i];
+        posicion++;
+      }
+    }
+    return resultado;
+    
+  }
+
   public static char[] coincidentes(char[] a1, char[] a2){
     if (a1 == null || a2 == null){
       return new char[0];
     }
 
     int contador = 0;
-    for (int i = 0; i < a1.length; i++) {
-        if (a1[i] == a2[i]) {
-            contador++;
+    for (int i = 0; i < a1.length; i++) { //El primer paso para resolver este ejercicio es darse cuenta de que lo
+        if (a1[i] == a2[i]) { //            primero que necesitas es una forma de saber de que tamaño será el array resultado.
+            contador++;// Para ello lo que hacemos es un bubcle y comparamos todos los elementos de los arrays, y contamos cuantos son iguales
         }
     }
     char[] resultado = new char[contador];
 
     int posicion = 0;
-    for(int i = 0; i< a1.length; i++){
-      if (a1[i] == a2[i]){
+    for(int i = 0; i< a1.length; i++){ //Luego hacemos otro bucle con el que si son iguales los elementos de nuevo los igualamos
+      if (a1[i] == a2[i]){//             siguiendo siempre su posicion con un indice para asegurarnos de que están en el lugar adecuado.
         resultado[posicion] = a1[i];
         posicion++;
       }
@@ -187,7 +210,7 @@ public static char[] borrar(char[] a, int i) {
 
   }
 
-  /* eliminarDuplicados(Array de caracteres a) -> Array de caracteres
+  /* eliminarDuplicados(Array de caracteres a) -> Array de caractere
    *
    * PRE: a no es null.
    *
