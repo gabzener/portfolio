@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Castillos",
+            "request": "launch",
+            "mainClass": "Laboratorios_2.Castillos",
+            "projectName": "portfolio_dcb6a111"
+        },
+        {
+            "type": "java",
+            "name": "Point2",
+            "request": "launch",
+            "mainClass": "Point2",
+            "projectName": "portfolio_dcb6a111"
+        },
+        {
+            "type": "java",
             "name": "ClassFuera",
             "request": "launch",
             "mainClass": "ClassFuera",

@@ -1,51 +1,91 @@
-/* This file is a version of Point2.java where the (nested) public static
-   class Point is moved up as a package-private class (a class that is only
-   visible to classes in the same package).
-*/
+class Point { 
 
-class Point {  // Notice: no "public" and no "static" qualifiers.
+  private double [] x_y;
 
-  public double x, y;
+  public double getX(){
+    return x_y[0];
+  }
+
+  public double getY(){
+    return x_y[1];
+  }
+
+  public void setX(double x){
+    this.x_y[0] = x;
+  }
+
+  public void setY(double y){
+    this.x_y[1] = y;
+  }
 
   public Point() {
-    this.x = 1.0;
-    this.y = 0.0;
+    this(0.0, 0.0);
   }
 
   public Point(Point p) {
-    // Assumes p != null.
-    this.x = p.x;
-    this.y = p.y;
+    this(p.getX(), p.getY());
   }
 
   public Point(double x, double y) {
-    this.x = x;
-    this.y = y;
+    x_y = new double[2];
+    this.setX(x);
+    this.setY(y);
   }
 
-  public String toString() {  // Removed "point" from the method name.
-    return "(x = " + this.x + ", y = " + this.y + ")";
+  public String toString() { 
+    return "(x = " + this.getX() + ", y = " + this.getY() + ")";
   }
 
-  public Point midPoint(Point p2) { // Can use "p" instead of "p2".
-    return new Point((this.x + p2.x) / 2, (this.y + p2.y) / 2);
+  public Point midPoint(Point p) { 
+    return new Point((this.getX() + p.getX()) / 2, (this.getY() + p.getY()) / 2);
   }
 
-  public double distance(Point p2) {  // Can use "p" instead of "p2".
-    return Math.sqrt(Math.pow(p2.x - this.x,2) + Math.pow(p2.y - this.y,2));
+  public double distance(Point p) { 
+    return Math.sqrt(Math.pow(p.getX() - this.getX(),2) + Math.pow(p.getY() - this.getY(),2));
+  }
+
+  public void addTo(Point p){
+    this.setX(this.getX() + p.getX());
+    this.setY(this.getY() + p.getY());
+  }
+
+  public Point add(Point p){
+    Point p0 = new Point();
+    p0.setX(this.getX() + p.getX());
+    p0.setY(this.getY() + p.getY());
+    return p0;
+  }
+
+  public boolean equals(Point p1){
+    return this.getX() == p1.getX() && this.getY() == p1.getY();
+  }
+
+  public Point escalar(Point p){
+    Point p0 = new Point();
+    p0.setX(this.getX() * p.getX());
+    p0.setY(this.getY() * p.getY());
+    return p0;
+  }
+
+  public Point dividir(Point p){
+    Point p0 = new Point();
+    p0.setX(this.getX() / p.getX());
+    p0.setY(this.getY() / p.getY());
+    return p0;
   }
 }
 
-// The main function is declared in the Point2b class which has the same name
-// as the file
 public class Point2 {
   public static void main(String [] args) {
-    Point p1 = new Point(1.0, 3.4);
-    Point p2 = new Point(2.5, -4.8);
+    Point p1 = new Point(1.0, 2.0);
+    Point p2 = new Point(1.0, 4.0);
     System.out.println(p1.toString());
     System.out.println(p2.toString());
     System.out.println("The mid point is: " + p2.midPoint(p2).toString());
     System.out.println(p1.midPoint(p2));
+    p2 = p1;
+    System.out.println(p2 == p1); // Compara direcciones de memoria
+    System.out.println(p1.equals(p2)); // Compara los valores de los objetos
 
   }
 }
