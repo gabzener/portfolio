@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "TableroJugar",
+            "request": "launch",
+            "mainClass": "Laboratorios_2.Lab4.TableroJugar",
+            "projectName": "portfolio_dcb6a111"
+        },
+        {
+            "type": "java",
+            "name": "VasoCLI",
+            "request": "launch",
+            "mainClass": "Laboratorios_2.Lab3.VasoCLI",
+            "projectName": "portfolio_dcb6a111"
+        },
+        {
+            "type": "java",
+            "name": "VasoTest",
+            "request": "launch",
+            "mainClass": "Laboratorios_2.Lab3.VasoTest",
+            "projectName": "portfolio_dcb6a111"
+        },
+        {
+            "type": "java",
             "name": "FracTest",
             "request": "launch",
             "mainClass": "Laboratorios_2.Lab2.FracTest",

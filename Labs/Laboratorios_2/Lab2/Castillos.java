@@ -24,6 +24,17 @@ public static void main(String[] args) {
 
   
   System.out.println(castillo.operar());
+
+
+  Frac f = new Frac(1,4);
+Assert.assertEquals("1 / 4", f.toString());
+System.out.println("Han pasado todas las pruebas");
+
+Frac a = new Frac(1,21);
+Frac b = new Frac(2,7);
+Frac r = a.sum(b);
+Assert.assertEquals(r, new Frac(1,3));
   }
+
 }
 

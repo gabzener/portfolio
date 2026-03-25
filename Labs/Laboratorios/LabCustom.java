@@ -32,9 +32,7 @@ public class LabCustom {
       return true;
     }
     for (int i = 0; i < m.length; ++i){ //posteriormente empezamos con el analísis de la matriz.
-      if (m[i].length != m.length){ //comprobamos si es cuadrada, y además si la diagonal está compuesta por 1.
-        return false;
-      } else if (m[i][i] != 1){
+      if ((m[i].length != m.length) || (m[i][i] != 1)){ //comprobamos si es cuadrada, y además si la diagonal está compuesta por 1.
         return false;
       }
       for(int j = 0; j < m[i].length; ++j){ // Luego comprobamos si cualquiera de los otros numeros es 0.
@@ -150,7 +148,7 @@ Pero esto no acaba aquí, ya que las length son distintas.
 
     for(int i = pos; i<original.length; ++i){ //Recorremos de nuevo el primer array, teniendo en cuenta que empezamos en pos
       resultado[indice] = original[i]; //       porque pos no puede ser mayor a original.length, hasta original.length
-                                              // con indice para terminar de recorrer el array resultado.
+      indice++;                              // con indice para terminar de recorrer el array resultado.
     }
 
     return resultado;
