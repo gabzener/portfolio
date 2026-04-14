@@ -48,5 +48,20 @@ public class Conversiones {
         System.out.println(invertido);
     }
 
+    // Convertir char a int
+
+    char c = '5';
+
+    // Opción 1: cast directo (da el código ASCII, no el número)
+    int ñ = (int) c;  // resultado: 53, no 5
+
+    // Opción 2: restar '0' (da el número real)
+    int p = c - '0';  // resultado: 5
+
+    // Convertir int a char
+
+    int k = 1;
+    char l = (char)('a' + k - 1);  // resultado: 'a'
+
 
 }

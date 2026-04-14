@@ -2,6 +2,11 @@
 
 public class Point0 {
 
+
+
+
+  // IMportante en java cuando vas de 1 a 4 vás de 0 a 3 es decir de 0 a n-1
+
   /* In the previous course we wrote programs using primitive types (int,
      double, boolean, char) and two pre-defined "object" types (arrays and
      String), not really knowing what an object really is. We wrote programs

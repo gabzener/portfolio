@@ -6,6 +6,55 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Elticketdeldía",
+            "request": "launch",
+            "mainClass": "Elticketdeldía",
+            "projectName": "portfolio_dcb6a111"
+        },
+        {
+            "type": "java",
+            "name": "SuitandTie",
+            "request": "launch",
+            "mainClass": "SuitandTie",
+            "projectName": "portfolio_dcb6a111"
+        },
+        {
+            "type": "java",
+            "name": "MainVector",
+            "request": "launch",
+            "mainClass": "Laboratorios_2.Lab5.MainVector",
+            "projectName": "portfolio_dcb6a111"
+        },
+        {
+            "type": "java",
+            "name": "TableroGraph",
+            "request": "launch",
+            "mainClass": "Laboratorios_2.Lab4.TableroGraph",
+            "projectName": "portfolio_dcb6a111"
+        },
+        {
+            "type": "java",
+            "name": "ReinaTest",
+            "request": "launch",
+            "mainClass": "Laboratorios_2.Lab4.ReinaTest",
+            "projectName": "portfolio_dcb6a111"
+        },
+        {
+            "type": "java",
+            "name": "ReinaJugar",
+            "request": "launch",
+            "mainClass": "Laboratorios_2.Lab4.ReinaJugar",
+            "projectName": "portfolio_dcb6a111"
+        },
+        {
+            "type": "java",
+            "name": "TableroTest",
+            "request": "launch",
+            "mainClass": "Laboratorios_2.Lab4.TableroTest",
+            "projectName": "portfolio_dcb6a111"
+        },
+        {
+            "type": "java",
             "name": "TableroJugar",
             "request": "launch",
             "mainClass": "Laboratorios_2.Lab4.TableroJugar",

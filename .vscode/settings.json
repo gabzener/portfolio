@@ -1,0 +1,10 @@
+{
+    "java.project.sourcePaths": [
+        "Labs/Apuntes_básicos",
+        "Labs",
+        "PrograCompe"
+    ],
+    "java.project.referencedLibraries": [
+        "Labs\\Laboratorios_2\\Lab4\\stdlib.jar"
+    ]
+}

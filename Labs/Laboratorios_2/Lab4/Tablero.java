@@ -12,8 +12,23 @@ public class Tablero {
    * marca los escaques blancos y negros
    */
   public Tablero (int n){
+    this.n = n;
     this.m = new char[n][n];
-    
+
+    if (n <= 3){
+      throw new IllegalArgumentException("El tamaño del tablero no puede ser de " + n + " x " + n);
+    } else if (n> 8){ 
+      throw new IllegalArgumentException("El tamaño del tablero no puede ser tan grande.");
+    }
+    for(int i = 0; i < n; ++i){
+      for(int j = 0; j < n; ++j){
+        if((i+j)%2 == 0){
+          m[i][j] = 'B';
+        } else{
+          m[i][j] = 'N';
+        }
+      }
+    }
   }
   /**
    * POST: resultado: coord in {1..n}
@@ -29,6 +44,8 @@ public class Tablero {
    *
    * Convierte la numeracion del tablero a la numeracion del array según
    * el enunciado
+   * 
+   * Sirve para combertir la posicion 1, 2, 3 y 4 al array
    */
   private int fila (int y)
   {
@@ -58,14 +75,15 @@ public class Tablero {
    * Pone c en el escaque (x,y) del tablero
    */
   public void poner (int x, int y, char c){
-    m[fila(y)][columna(x)] = c;
+    this.m[fila(y)][columna(x)] = c;
 
   }
 
   /**
    * POST: resultado: dimensión del Tablero
    */
-  public int dimension (){
+  public int dimension(){
+    return n;
 
 
   }
@@ -83,12 +101,20 @@ public class Tablero {
     public String toString ()
     {
     String tab = "";
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-        tab += m[i][j] + " ";
+    char[] letras = new char[this.n];
+    String final_letras = "";
+    for (int i = 0; i < n; ++i) {
+      int temp = this.n - i;
+      String num = "" + temp;
+      tab += "   " + num + "   ";
+      letras[i] = (char)('a' + i);
+      final_letras += letras[i] + " ";
+        for (int j = 0; j < n; ++j) {
+          tab += m[i][j] + " ";
         }
         tab += "\n";
     }
+    tab +="\n" + "       " + final_letras;
     return tab + "\n";
     }
   /**
@@ -100,6 +126,7 @@ public class Tablero {
    *                    ...
    */
   public char car (int k){
+    return (char)('a' + k - 1);
 
   }
 
