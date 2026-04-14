@@ -1,55 +1,38 @@
-
-
 import java.util.Scanner;
 
 public class SuitandTie {
-    final static java.util.Scanner scan = new Scanner(System.in);
-
-
-    public static int ordenar(int [] array, int num_parejas){
-        int resultado = 0;
-        for (int i = 0; i < array.length - 1; i++) {
-            if(array[i] == num_parejas){
-
-            }
-        }
-
-        return resultado;
-
-    }
-
-    /*public static int ordenar(int [] array){
-        int resultado = 0;
-        for (int i = 0; i < array.length - 1; i++) {
-            for (int j = 0; j < array.length - i - 1; j++) {
-                if (array[j] > array[j + 1]) {
-                    int temp = array[j];
-                    array[j] = array[j + 1];
-                    array[j + 1] = temp;
-                    resultado++;
-                }
-            }
-        }
-
-        return resultado;
-
-    } */
 
     public static void main(String [] args){
-        int num_parejas = scan.nextInt();
-        int num_personas = 2 * num_parejas;
-    
-        int [] personas = new int [num_personas];
 
-        for( int i = 0; i<num_personas; ++i){
-            personas[i] = scan.nextInt();
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int [] arr = new int[2 * n];
+
+        for(int i = 0; i< 2*n; ++i) arr[i] = sc.nextInt();
+
+        int contador = 0;
+
+        for(int i = 0; i < 2 * n; i+=2){
+            int j = i+1;
+            int arr_temp = arr[i];
+            while(arr[j] != arr_temp){
+                j++;
+            }
+            while(j > i+1){
+                int temp = arr[j];
+                arr[j] = arr[j-1];
+                arr[j-1] = temp;
+                j--;
+                contador++;
+
+            }
+
         }
-
-        System.out.println(ordenar(personas, num_parejas));
         
+        System.out.println(contador);
+
+
     }
-
-
 
     
 }
