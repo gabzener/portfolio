@@ -1,8 +1,9 @@
 {
     "java.project.sourcePaths": [
+        "PrograCompe",
         "Labs/Apuntes_básicos",
         "Labs",
-        "PrograCompe"
+        "ParaExámenes/23-24"
     ],
     "java.project.referencedLibraries": [
         "Labs\\Laboratorios_2\\Lab4\\stdlib.jar"

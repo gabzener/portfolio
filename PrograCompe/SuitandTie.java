@@ -24,7 +24,6 @@ public class SuitandTie {
                 arr[j-1] = temp;
                 j--;
                 contador++;
-
             }
 
         }

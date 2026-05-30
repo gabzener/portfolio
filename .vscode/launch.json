@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Terna",
+            "request": "launch",
+            "mainClass": "Terna",
+            "projectName": "portfolio_dcb6a111"
+        },
+        {
+            "type": "java",
+            "name": "Temp",
+            "request": "launch",
+            "mainClass": "Temp",
+            "projectName": "portfolio_dcb6a111"
+        },
+        {
+            "type": "java",
+            "name": "GuiaExcepciones",
+            "request": "launch",
+            "mainClass": "GuiaExcepciones",
+            "projectName": "portfolio_dcb6a111"
+        },
+        {
+            "type": "java",
+            "name": "ComoHacerPruebas",
+            "request": "launch",
+            "mainClass": "ComoHacerPruebas",
+            "projectName": "portfolio_dcb6a111"
+        },
+        {
+            "type": "java",
             "name": "Elticketdeldía",
             "request": "launch",
             "mainClass": "Elticketdeldía",

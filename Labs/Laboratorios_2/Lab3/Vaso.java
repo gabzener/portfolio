@@ -33,7 +33,7 @@ public class Vaso {
    */
   public void llenarVaso(int cantidad){
     if (contenido + cantidad > capacidad)
-      throw new RuntimeException("La cantidad supera la capacidad del vaso");
+      throw new IllegalArgumentException("La cantidad supera la capacidad del vaso");
     else
       this.contenido += cantidad;
   }
@@ -57,6 +57,14 @@ public class Vaso {
     return this.capacidad;
 
   }
+
+  /**
+   * @pre Nada
+   *
+   * @post retorna contenido
+   * 
+   * @param contenido
+   */
   public int contenido(){
     return this.contenido;
 

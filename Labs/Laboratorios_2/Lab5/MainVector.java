@@ -4,11 +4,11 @@ public class MainVector {
 
     public static void main(String [] args){
         double [] arr = new double[] {2.0,3.4};
-        Vector v1 = new Vector(arr, true);
-        Vector v2 = new Vector(new double [] {1.0,2.0}, true);
+        Extra v1 = new Extra(arr, true);
+        Extra v2 = new Extra(new double [] {1.0,2.0}, true);
         arr[0] = 1.0;
         System.out.println(v1.getcoords(0));
-        Vector v3 = new Vector(v2);
+        Extra v3 = new Extra(v2);
         
     }
     

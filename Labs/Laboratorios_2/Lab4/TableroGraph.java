@@ -1,6 +1,4 @@
 package Laboratorios_2.Lab4;
-
-import java.awt.Font;
 import stdlib.StdDraw;
 public class TableroGraph {
   /**
