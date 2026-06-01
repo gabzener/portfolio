@@ -8,7 +8,6 @@ public class MainVector {
         Extra v2 = new Extra(new double [] {1.0,2.0}, true);
         arr[0] = 1.0;
         System.out.println(v1.getcoords(0));
-        Extra v3 = new Extra(v2);
         
     }
     

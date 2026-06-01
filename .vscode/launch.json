@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Carta",
+            "request": "launch",
+            "mainClass": "Laboratorios_2.Lab6.Practica_Veintiuna.src.veintiuna.Carta",
+            "projectName": "portfolio_dcb6a111"
+        },
+        {
+            "type": "java",
             "name": "Terna",
             "request": "launch",
             "mainClass": "Terna",
