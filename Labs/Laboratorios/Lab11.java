@@ -1,10 +1,4 @@
 package Laboratorios;
-/*
- * autor: Clara Benac Earle
- *
- * Matrices
- *
- */
 
 class Lab11{
 
@@ -59,6 +53,16 @@ class Lab11{
      *
      */
 
+    public int [][] identidad(int n){
+        int [][] matrizid = new int[n][n];
+        for (int i = 0; i< matrizid.length; ++i){
+            for (int j = 0; j < matrizid[i].length; ++j){
+                matrizid[i][j] = (i == j) ? 1 : 0;
+            }
+        }
+        return matrizid;
+    }
+
     public static int[][] identity(int n){
         int [][] matrizidentidad = new int[n][n];
 
@@ -86,7 +90,20 @@ class Lab11{
      *   equals([[1,2],[3,4]],[[1,2],[3,4]]) -> true
      */
 
-    public static boolean equals(int[][] m1, int[][] m2) {
+    public static boolean equals(int [][] m1, int [][] m2){
+        if ((m1 == null) || (m2 == null))return false;
+        if ( m1 == m2) return true;
+        if ( m1.length != m2.length) return false;
+
+        for (int i = 0; i<m1.length; ++i){
+            for( int j = 0; j<m1[i].length; ++j){
+                if (m1[i][j] != m2[i][j]){
+                    return false;
+                }}}
+        return true;
+    }
+
+    public static boolean equals2(int[][] m1, int[][] m2) {
         if (m1 == m2) return true;
         if (m1 == null || m2 == null) return false;
         if (m1.length != m2.length) return false;
@@ -97,9 +114,7 @@ class Lab11{
             for (int j = 0; j < m1[i].length; j++) {
                 if (m1[i][j] != m2[i][j]) {
                     return false;
-                }
-            }
-        }
+                }}}
         
         return true;
     }
@@ -119,9 +134,7 @@ class Lab11{
         for(int i= 0; i<m1.length; i++){
             for(int j = 0; j<m1[i].length; j++){
                 resultado[i][j] = m1[i][j] + m2[i][j];
-            }
-            
-        }
+            }}
         return resultado;
     }
 
@@ -136,15 +149,12 @@ class Lab11{
      */
 
     public static boolean findN(int[][] m, int n){
-        boolean resultado = false;
         for(int i = 0; i<m.length; i++){
             for(int j = 0; j <m[i].length; j++){
                 if(m[i][j] == n){
                     return true;
-                }
-            }
-        }
-        return resultado;
+                }}}
+        return false;
 
     }
 

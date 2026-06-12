@@ -71,7 +71,7 @@ public class Lista {
         return logitud;
     }
     public void eliminarPrincipio(){
-        if (cabeza == null){
+        if (cabeza != null){
             Nodo primer = cabeza;
             cabeza = cabeza.siguiente;
             primer.siguiente = null;
@@ -86,6 +86,7 @@ public class Lista {
             if (cabeza.siguiente == null){
                 cabeza = null;
                 logitud--;
+                return;
                 
             }
             Nodo puntero = cabeza;

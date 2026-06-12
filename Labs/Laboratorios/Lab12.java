@@ -31,6 +31,17 @@ class Lab12{
      * si arr es [4,3,2] lo convierte a [2,3,4]
      */
 
+    public static int [] ordenarInsercion2(int [] arr){ // Solo sirve para casos básicos como el del ejemplo
+        for (int i = 1; i < arr.length; ++i){ // ya que por ejemplo para el caso [2,7,6,4,1] se quedaría en
+            if (arr[i] < arr[i -1]){ // [2,6,4,1,7] lo cual no sería válido.
+                int temp = arr[i];
+                arr[i] = arr[i -1 ];
+                arr[i -1] = temp;
+            }
+        }
+        return arr;
+    }
+
     public static int[] ordenarInsercion(int [] arr){
         int [] resultado = new int[arr.length];
         for(int i = 1; i< arr.length; i++){
@@ -42,9 +53,6 @@ class Lab12{
         return resultado;
     }
 
-
-
-
     /* FUNCION: busquedaBinariaR(array de enteros arr, int n) -> boolean
      * PRE: arr no es null
      * POST: el resultado es true si n esta en arr y false e.o.c.
@@ -54,6 +62,24 @@ class Lab12{
      */
 
     //Esto no es busqueda binaria, no me han eseñado estos algoritmos como tal.
+
+    public static boolean busquedaBinariaR2(int [] arr, int n){
+        if (arr == null){
+            return false;
+        } else {
+            return busquedaBinariaRAux2(arr, n, 0);
+        }
+    }
+
+    public static boolean busquedaBinariaRAux2(int [] arr, int n, int i){
+        if (i> arr.length){
+            return false;
+        }
+        if (arr[i] == n){
+            return true;
+        }
+        return busquedaBinariaRAux2(arr, n, i+1);
+    }
 
     public static boolean busquedaBinariaR(int [] arr, int n){
         if(arr == null){
@@ -74,7 +100,6 @@ class Lab12{
         return busquedaBinariaRAux(arr, n, i+1);
     }
 
- 
     /*
      * PROCEDIMIENTO: ordenar(array de enteros arr)
      * PRE: arr no es null
@@ -83,6 +108,9 @@ class Lab12{
      * Se debe comentar que metodo se usa
      *   si arr es [4,3,2] lo convierte a [2,3,4]
      */
+
+
+    
 
   
     public static void main(String[] args){

@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Ejercicios",
+            "request": "launch",
+            "mainClass": "Progra_I.Ejercicios",
+            "projectName": "portfolio_dcb6a111"
+        },
+        {
+            "type": "java",
             "name": "Carta",
             "request": "launch",
             "mainClass": "Laboratorios_2.Lab6.Practica_Veintiuna.src.veintiuna.Carta",
