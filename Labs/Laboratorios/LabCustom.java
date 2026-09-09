@@ -27,6 +27,25 @@ public class LabCustom {
     - Comprobar que el resto de numeros son 0
     - Además cumplir las PRE que son que m no sea null. */
 
+
+  public static boolean esIdentidad2(int [][] m){
+    if (m == null || m.length == 0){
+      return true;
+    }
+    for (int i = 0; i<m.length; ++i){
+      if (m[i].length != m.length || m[i][i] != 1){
+        return false;
+      }
+      for(int j = 0; j<m[i].length; ++j){
+        if (m[i][j] != 0 && i != j){
+          return false;
+        }
+      }
+    }
+    return true;
+
+  }
+
   public static boolean esIdentidad(int [][] m){
     if (m.length == 0){ // primero comprobamos que la matriz m no es null
       return true;
@@ -76,6 +95,26 @@ Pero esto no acaba aquí, ya que las length son distintas.
         acumulaSumas({2,3,4,1}) modifica el array con el resultado {2,5,9,10}
 
    */
+  public static void acumulaSumas2(int [] arr){
+    if (arr == null || arr.length <= 1){
+      return;
+    } else {
+      acumulaSumas2Aux(arr, 1, arr[0]);
+    }
+
+  }
+
+  public static void acumulaSumas2Aux(int [] arr, int n, int acumulado){
+    if(n>=arr.length){
+      return;
+    }
+    acumulado =+ arr[n];
+    arr[n] = acumulado;
+
+    acumulaSumas2Aux(arr, n + 1, acumulado);
+
+
+  }
 
   public static void acumulaSumas(int [] arr){ //Dado que es un proceso se añade void 
     if (arr == null || arr.length <= 1){ //AQuí complimos el PRE y el 2 caso de uso
@@ -127,6 +166,33 @@ Pero esto no acaba aquí, ya que las length son distintas.
      * insertarArray( {'a','b'}, 2, {'x','y'} ) -> {'a','b','x','y'}
      * insertarArray( {'a','b','c'}, 0, {'x','y'} ) ->{'x','y','a','b','c'}
     */
+
+  public static char[] insertarArray2(char[] a, int pos, char[] b){
+    if (pos < 0 || a == null || b == null || pos > a.length){
+      return null;
+    }
+    char [] resultado = new char[a.length + b.length];
+    int contador = 0;
+
+    for (int i = 0; i<pos; ++i){
+      resultado[contador] = a[i];
+      contador++;
+    }
+    for(int i = 0; i<b.length; ++i){
+      resultado[contador] = b[i];
+      contador++;
+    }
+    for(int i = pos; i<a.length; ++i){
+      resultado[contador] = a[i];
+      contador++;
+    }
+
+    return resultado;
+
+
+
+  }
+
 
   public static char[] insertarArray(char[] original, int pos, char[] sustitucion){
     if ( pos < 0){

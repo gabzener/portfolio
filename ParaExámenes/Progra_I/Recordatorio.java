@@ -13,6 +13,22 @@ public class Recordatorio {
         return resto;
     }
 
+    public static void ordenarInsercion(int [] nums){
+
+        for (int i = 1; i< nums.length; ++i){
+            int aux = nums[i];
+            int j  = i - 1;
+
+            while(nums[j]> aux && j>= 0){
+                nums[j+1] = nums[j];
+                j--;
+            }
+
+            nums[j +1] = aux;
+        }
+
+    }
+
     public static void main(String [] args){
         int dni = 8928867;
         double modulo = 23;

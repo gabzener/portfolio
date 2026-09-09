@@ -130,6 +130,9 @@ class Lab11{
      */
 
     public static int[][] sumMatrices(int[][]m1,int[][]m2){
+        if (!(m1.length == m2.length)){
+            return null;
+        }
         int[][] resultado = new int[m1.length][m1.length];
         for(int i= 0; i<m1.length; i++){
             for(int j = 0; j<m1[i].length; j++){

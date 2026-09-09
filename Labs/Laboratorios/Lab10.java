@@ -30,6 +30,20 @@ public class Lab10 {
    *  concatenar( {'a', 'b', 'c'}, {'c', 'd'} ) -> {'a', 'b', 'c', 'c', 'd'}
    */
 
+    public static char[] concatenar2(char[] arr1, char[] arr2){
+      if((arr1 == null) || (arr2 == null)){return null;}
+      char[] resultado = new char[arr2.length + arr2.length];
+      for(int i = 0; i<arr1.length; ++i){
+        resultado[i] = arr1[i];
+      }
+      for(int i = 0; i<arr2.length; ++i){
+        resultado[arr1.length + i] = arr2[i];
+      }
+      return resultado;
+
+    }
+
+
     public static char[] concatenar(char[] a, char[] b){
       char [] resultado = new char[a.length + b.length];
 

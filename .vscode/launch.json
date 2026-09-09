@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "test",
+            "request": "launch",
+            "mainClass": "AED.test",
+            "projectName": "portfolio_dcb6a111"
+        },
+        {
+            "type": "java",
             "name": "Ejercicios",
             "request": "launch",
             "mainClass": "Progra_I.Ejercicios",
