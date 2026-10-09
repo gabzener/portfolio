@@ -13,7 +13,7 @@ public class ActaNotasImpl implements ActaNotas{
     private String asignatura;
     private double notaMinimaAprobado;
     private int anyo;
-    private boolean esConvocatoriaExtraordinaria;
+    private boolean esConvocatoriaExtraordinaria; // false = ordinaria , true = extraordinaria.
     private IndexedList<Calificacion> calificaciones;
 
     public ActaNotasImpl(String asignatura, double nota, int anyo, boolean esConvocatoriaExtraordinaria){
@@ -40,7 +40,8 @@ public class ActaNotasImpl implements ActaNotas{
         if(this == obj) return true;
         if(obj instanceof ActaNotasImpl){
             return this.asignatura.equals(((ActaNotasImpl)obj).asignatura) && this.anyo == ((ActaNotasImpl)obj).anyo && this.esConvocatoriaExtraordinaria == ((ActaNotasImpl)obj).esConvocatoriaExtraordinaria;
-        }
+        } // El ((ActaNotasImpl)obj).asignatura hace que el parametro que se le da al metodo
+        // Object obj, se transforme el objeto sobre el que queremos trabajar.
         return false;
     }
 
