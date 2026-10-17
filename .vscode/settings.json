@@ -1,14 +1,17 @@
 {
     "java.project.sourcePaths": [
         ".",
+        "aed",
         "Labs",
         "Labs\\Apuntes_básicos",
         "ParaExámenes",
         "PrograCompe"
     ],
     "java.project.referencedLibraries": [
-        "aed\\aedlib.jar",
-        "c:\\Personal\\portfolio\\Labs\\Laboratorios_2\\Lab4\\stdlib.jar"
+        "c:\\Personal\\portfolio\\aed\\Lab_2\\lib\\junit-platform-console-standalone-1.10.3.jar",
+        "c:\\Personal\\portfolio\\Labs\\Laboratorios_2\\Lab4\\stdlib.jar",
+        "c:\\Personal\\portfolio\\aed\\aedlib.jar"
     ],
-    "java.debug.settings.onBuildFailureProceed": true
+    "java.debug.settings.onBuildFailureProceed": true,
+    "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx8G -Xms100m -Xlog:disable"
 }

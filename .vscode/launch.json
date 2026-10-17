@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ActaNotasImpsadasl",
+            "request": "launch",
+            "mainClass": "Lab_1.ActaNotasImpsadasl",
+            "projectName": "portfolio_dcb6a111"
+        },
+        {
+            "type": "java",
+            "name": "Polinomio",
+            "request": "launch",
+            "mainClass": "Lab_2.src.aed.polinomios.Polinomio",
+            "projectName": "portfolio_dcb6a111"
+        },
+        {
+            "type": "java",
+            "name": "ActaNotasImpsadasl",
+            "request": "launch",
+            "mainClass": "aed.Lab_1.ActaNotasImpsadasl",
+            "projectName": "portfolio_dcb6a111"
+        },
+        {
+            "type": "java",
             "name": "Calificacion",
             "request": "launch",
             "mainClass": "aed.Lab_1.Calificacion",
